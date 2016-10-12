@@ -1,0 +1,25 @@
+﻿@{
+    ViewBag.Title = "Twitter Tweets";
+}
+
+<div ng-app="TwitterTweets" ng-controller="tweetsController">
+    <div class="row">
+        <div class="col-md-4">
+            <h2>Username</h2>
+            <div class="input-group">
+                <input type="text" class="form-control" placeholder="Type Username..." ng-model="UserInfo.Username" />
+                <span class="input-group-btn">
+                    <button type="submit" class="btn btn-success" ng-click="UserInfo.GetTweets()">Go</button>
+                </span>
+            </div>
+            <p></p>
+
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="alert alert-success" role="alert">Hi: {{UserInfo.UserTweets}}</div>
+        </div>
+    </div>
+</div>
+
